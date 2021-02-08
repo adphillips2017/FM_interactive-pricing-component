@@ -1,0 +1,301 @@
+:root {
+  --mobile: 375px;
+  --desktop: 1440px;
+  /* Primary */
+  --soft_cyan: hsl(174, 77%, 80%);
+  --strong_cyan: hsl(174, 86%, 45%);
+  --light_gray_red: hsl(14, 92%, 95%);
+  --light_red: hsl(15, 100%, 70%);
+  --pale_blue: hsl(226, 100%, 87%);
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --very_pale_blue: hsl(230, 100%, 99%);
+  --light_gray_blue: hsl(224, 65%, 95%);
+  --lighter_gray_blue: hsl(223, 50%, 87%);
+  --gray_blue: hsl(225, 20%, 60%);
+  --dark_blue: hsl(227, 35%, 25%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-image: url(./images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-color: var(--very_pale_blue);
+  background-size: cover;
+  padding-bottom: 1rem;
+}
+
+.centered-content {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.floating-content {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-image: url(./images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.header {
+  color: var(--dark_blue);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--gray_blue);
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 0.75rem;
+  -webkit-box-shadow: 5px 5px 25px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 5px 5px 25px 10px rgb(0 0 0 / 5%);
+  border-bottom: 1px solid var(--light_gray_blue);
+}
+
+.card-content {
+  padding: 2rem;
+  padding-top: 3rem;
+}
+
+.bottom-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.check-row {
+    display: flex;
+    margin-bottom: .5rem;
+}
+
+.checkmark {
+    margin-right: 1rem;
+    background-image: url(./images/icon-check.svg);
+    height: 1rem;
+    width: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.check-label {
+    color: var(--gray_blue);
+    font-size: .75rem;
+}
+
+.start-button {
+    padding: 2.5rem;
+    padding-top: -0rem;
+    padding-bottom: 0rem;
+    text-align: center;
+    color: var(--pale_blue);
+    background-color: var(--dark_blue);
+    border-radius: 2.5rem;
+    height: 2.5rem;
+    margin-top: .75rem;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    color: var(--very_pale_blue);
+}
+
+.views-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.pageviews {
+  color: var(--gray_blue);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#price {
+  color: var(--dark_blue);
+  font-size: 2.5rem;
+  vertical-align: middle;
+}
+
+#priceRecurrence {
+  color: var(--gray_blue);
+}
+
+#slider {
+  background: linear-gradient(
+    to right,
+    var(--soft_cyan) 0%,
+    var(--soft_cyan) 50%,
+    var(--light_gray_blue) 50%,
+    var(--light_gray_blue) 100%
+  );
+  border-radius: 8px;
+  height: 7px;
+  width: 100%;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+  margin-bottom: 3.25rem;
+}
+
+/* Special styling for WebKit */
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background: var(--strong_cyan);
+  cursor: pointer;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  -webkit-box-shadow: 0px 11px 25px 1px var(--strong_cyan);
+  box-shadow: 0px 11px 25px 1px var(--strong_cyan);
+  background-image: url(./images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Firefox */
+
+input[type="range"]::-moz-range-thumb {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background: var(--strong_cyan);
+  cursor: pointer;
+  box-shadow: 0px 11px 25px 1px var(--strong_cyan);
+  background-image: url(./images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* IE */
+
+input[type="range"]::-ms-thumb {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background: var(--strong_cyan);
+  cursor: pointer;
+  box-shadow: 0px 11px 25px 1px var(--strong_cyan);
+  background-image: url(./images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.switch-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.switch-label {
+    color: var(--gray_blue);
+    font-size: .75rem;
+    align-self: center;
+}
+
+.color-tag {
+    background-color: var(--light_gray_red);
+    color: var(--light_red);
+    padding: .25rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: .6rem;
+    border-radius: 1rem;
+    margin-left: .5rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--lighter_gray_blue);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--white);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--soft_cyan);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--soft_cyan);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 5rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Footer */
+
+.attribution {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  color: var(--dark_blue);
+  font-size: 0.75rem;
+}
+
+.text-red {
+  color: var(--light_red);
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+  color: var(--light_red);
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="floating-content centered-content">
+        <div class="header">Simple, traffic-based pricing</div>
+        <div class="subtitle">Sign-up for our 30-day trial. No credit card required.</div>
+    </div>
+
+    <div class="card centered-content">
+        <div class="card-content">
+            <div class="views-price">
+                <div class="pageviews">
+                    <span class="viewcount" id="viewcount">100k</span> Pageviews
+                </div>
+
+                <div class="price-breakdown">
+                    <span id="price">$16.00</span>
+                    <span id="priceRecurrence">/month</span>
+                </div>
+            </div>
+
+            <input type="range" step="1" min="0" max="4" value="2" id="slider">
+
+            <div class="switch-container">
+                <span class="switch-label">
+                    Monthly Billing
+                </span>
+                <label class="switch" for="monthlyCheck">
+                    <input id="monthlyCheck" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <span class="switch-label">
+                    Yearly Billing <span class="color-tag">25% discount</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="card-content bottom-content">
+            <div class="checks-container">
+                <div class="check-row">
+                    <div class="checkmark"></div>
+                    <div class="check-label">Unlimited websites</div>
+                </div>
+
+                <div class="check-row">
+                    <div class="checkmark"></div>
+                    <div class="check-label">100% data ownership</div>
+                </div>
+
+                <div class="check-row">
+                    <div class="checkmark"></div>
+                    <div class="check-label">Email reports</div>
+                </div>
+            </div>
+
+            <button class="start-button">Start my trial</button>
+        </div>
+    </div>
+
+    <div class="attribution">
+        <span class="text-red">&lt;</span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.linkedin.com/in/adam-phillips/">Adam Phillips</a>. <span class="text-red">/&gt;</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
