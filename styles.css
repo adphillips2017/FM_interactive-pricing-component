@@ -1,6 +1,4 @@
 :root {
-  --mobile: 375px;
-  --desktop: 1440px;
   /* Primary */
   --soft_cyan: hsl(174, 77%, 80%);
   --strong_cyan: hsl(174, 86%, 45%);
@@ -27,7 +25,7 @@ body {
 
 .centered-content {
   margin: 0 auto;
-  width: 40%;
+  width: 27rem;
 }
 
 .floating-content {
@@ -56,12 +54,15 @@ body {
   border-radius: 0.75rem;
   -webkit-box-shadow: 5px 5px 25px 10px rgba(0, 0, 0, 0.05);
   box-shadow: 5px 5px 25px 10px rgb(0 0 0 / 5%);
-  border-bottom: 1px solid var(--light_gray_blue);
 }
 
 .card-content {
   padding: 2rem;
   padding-top: 3rem;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--light_gray_blue);
 }
 
 .bottom-content {
@@ -100,10 +101,15 @@ body {
     height: 2.5rem;
     margin-top: .75rem;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .start-button:hover {
     color: var(--very_pale_blue);
+}
+
+button:focus {
+  outline:0;
 }
 
 .views-price {
@@ -118,6 +124,7 @@ body {
   color: var(--gray_blue);
   text-transform: uppercase;
   letter-spacing: 2px;
+  white-space: nowrap;
 }
 
 #price {
@@ -201,6 +208,7 @@ input[type="range"]::-ms-thumb {
     color: var(--gray_blue);
     font-size: .75rem;
     align-self: center;
+    white-space: nowrap;
 }
 
 .color-tag {
@@ -212,6 +220,7 @@ input[type="range"]::-ms-thumb {
     font-size: .6rem;
     border-radius: 1rem;
     margin-left: .5rem;
+    white-space: nowrap;
 }
 
 /* The switch - the box around the slider */
@@ -298,4 +307,73 @@ a:visited,
 a:active,
 a:hover {
   color: var(--light_red);
+}
+
+@media (max-width: 475px) {
+  .floating-content {
+    margin-top: 0rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .centered-content {
+    width: 95%;
+  }
+
+  .views-price {
+    flex-direction: column;
+  }
+
+  .large-only {
+    display: none;
+  }
+
+  .card-content {
+    padding-top: 2rem;
+  }
+
+  .bottom-content {
+    flex-direction: column;
+  }
+
+  .checks-container {
+    margin-bottom: 1rem;
+  }
+
+  .check-row {
+    margin-left: 25%;
+  }
+
+  .start-button {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .attribution {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    position: inherit;
+  }
+}
+
+@media (max-width: 375px) {
+  .start-button {
+    width: auto;
+  }
+
+  .check-row {
+    margin-left: 15%;
+  }
+
+  .xs-up {
+    display: none;
+  }
+}
+
+@media (min-width: 476px) {
+  .small-only {
+    display: none;
+  }
 }
