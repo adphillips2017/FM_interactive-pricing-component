@@ -43,6 +43,7 @@ body {
   color: var(--dark_blue);
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  font-weight: 800;
 }
 
 .subtitle {
