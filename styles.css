@@ -25,7 +25,7 @@ body {
 
 .centered-content {
   margin: 0 auto;
-  width: 27rem;
+  width: 32rem;
 }
 
 .floating-content {
@@ -59,7 +59,7 @@ body {
 
 .card-content {
   padding: 2rem;
-  padding-top: 3rem;
+  padding-top: 2.5rem;
 }
 
 .border-bottom {
@@ -103,6 +103,7 @@ body {
     margin-top: .75rem;
     cursor: pointer;
     white-space: nowrap;
+    border: none;
 }
 
 .start-button:hover {
@@ -118,7 +119,7 @@ button:focus {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .pageviews {
@@ -130,7 +131,8 @@ button:focus {
 
 #price {
   color: var(--dark_blue);
-  font-size: 2.5rem;
+  font-size: 2.25rem;
+  font-weight: 800;
   vertical-align: middle;
 }
 
@@ -156,7 +158,6 @@ button:focus {
 }
 
 /* Special styling for WebKit */
-
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 2.5rem;
@@ -173,7 +174,6 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* Firefox */
-
 input[type="range"]::-moz-range-thumb {
   height: 2.5rem;
   width: 2.5rem;
@@ -187,7 +187,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* IE */
-
 input[type="range"]::-ms-thumb {
   height: 2.5rem;
   width: 2.5rem;
@@ -290,7 +289,6 @@ input:checked + .slider:before {
 }
 
 /* Footer */
-
 .attribution {
   position: fixed;
   bottom: 1rem;
@@ -310,6 +308,12 @@ a:hover {
   color: var(--light_red);
 }
 
+@media (max-width: 540px) {
+  .centered-content {
+    width: 95%;
+  }
+}
+
 @media (max-width: 475px) {
   .floating-content {
     margin-top: 0rem;
@@ -317,8 +321,12 @@ a:hover {
     padding-bottom: 3rem;
   }
 
-  .centered-content {
-    width: 95%;
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: .8rem;
   }
 
   .views-price {
@@ -349,6 +357,10 @@ a:hover {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .switch-container {
+    justify-content: space-evenly;
   }
 
   .attribution {
